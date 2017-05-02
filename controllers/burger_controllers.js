@@ -15,4 +15,11 @@ router.get("/", function (req, res){
     })
 });
 
+router.post("/", function(req, res) {
+    burger.insertInto(req.body.burger, function(results) {
+        res.redirect("/");
+    });
+});
+
+
 module.exports = router;

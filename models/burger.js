@@ -4,13 +4,18 @@
 var orm = require("../config/orm.js");
 
 var burger = {
-  selectAll:  function(bd) {
-      orm.selectAll("burgers", function(res) {
-          bd(res);
-      });
-  }
-};
+    selectAll: function (cb) {
+        orm.selectAll("burgers", function (res) {
+            cb(res);
+        });
+    },
 
+    insertInto: function (burger_name, cb) {
+        orm.insertInto(burger_name, function (res) {
+            cb(res)
+        });
+    }
+};
 module.exports = burger;
 
 
