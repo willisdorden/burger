@@ -19,7 +19,16 @@ var orm= {
             if (err) throw err;
             cb(data);
         });
+    },
+    updateOne: function(id, cb){
+        var queryString = "UPDATE burgers SET ? WHERE ?";
+        connection.query(queryString,[{devoured: true},{id:id}],function(err,res){
+            if(err)
+                throw err;
+                cb(res);
+        });
     }
 };
+
 
 module.exports = orm;

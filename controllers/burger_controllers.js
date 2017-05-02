@@ -21,5 +21,10 @@ router.post("/", function(req, res) {
     });
 });
 
+router.put("/:id",function(req,res){
+    burger.updateOne(req.params.id, function (results) {
+        res.redirect('/');
+    })
+});
 
 module.exports = router;

@@ -14,6 +14,11 @@ var burger = {
         orm.insertInto(burger_name, function (res) {
             cb(res)
         });
+    },
+    updateOne: function(id,cb){
+        orm.updateOne(id,function(res){
+            cb(res);
+        });
     }
 };
 module.exports = burger;
