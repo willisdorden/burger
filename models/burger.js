@@ -19,6 +19,11 @@ var burger = {
         orm.updateOne(id,function(res){
             cb(res);
         });
+    },
+    deleteBurger:function(id,cb){
+        orm.deleteBurger(id,function(res){
+            cb(res);
+        });
     }
 };
 module.exports = burger;

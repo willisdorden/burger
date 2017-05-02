@@ -27,6 +27,14 @@ var orm= {
                 throw err;
                 cb(res);
         });
+    },
+    deleteBurger: function(id,cb){
+        var queryString = "Delete from burgers WHERE ?";
+        connection.query(queryString,[{id:id}],function(err,res){
+            if(err)
+                throw err;
+            cb(res);
+        });
     }
 };
 
