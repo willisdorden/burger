@@ -8,7 +8,7 @@ body {
 
 
 h1{
-    color: dodgerblue;
+    color: crimson;
     font-family: 'Nobile', Helvetica, Arial, sans-serif;
     text-shadow: 1px 1px 1px #ccc;
     letter-spacing: 3px;
@@ -18,7 +18,7 @@ h1{
 
 .list-group-item-warning {
     background-color: darkslategrey;
-    color: black;
+    color: darkorange;
     font-family: 'Nobile', Helvetica, Arial, sans-serif;
     text-shadow: 1px 1px 1px #ccc;
     letter-spacing: 3px;
